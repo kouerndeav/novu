@@ -1,0 +1,75 @@
+{
+  "nodes": {
+    "automation": {
+      "name": "automation",
+      "type": "lib",
+      "data": {
+        "root": ".",
+        "sourceRoot": "src",
+        "name": "automation",
+        "tags": ["npm:private"],
+        "metadata": {
+          "targetGroups": {
+            "NPM Scripts": ["generate:provider", "lint:fix"]
+          }
+        },
+        "targets": {
+          "generate:provider": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "generate:provider"
+            },
+            "metadata": {
+              "scriptContent": "pnpm nx g automation:provider",
+              "runCommand": "npm run generate:provider"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "lint:fix": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "lint:fix"
+            },
+            "metadata": {
+              "scriptContent": "pnpm lint -- --fix",
+              "runCommand": "npm run lint:fix"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "lint": {
+            "executor": "@nx/eslint:lint",
+            "options": {
+              "lintFilePatterns": ["./src", "./package.json", "generators.json"]
+            },
+            "configurations": {},
+            "parallelism": true,
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{workspaceRoot}/.eslintignore",
+              "{workspaceRoot}/eslint.config.js"
+            ]
+          }
+        },
+        "$schema": "node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "release": {
+          "version": {
+            "generatorOptions": {
+              "packageRoot": "dist/{projectRoot}",
+              "currentVersionResolver": "git-tag"
+            }
+          }
+        },
+        "implicitDependencies": []
+      }
+    }
+  },
+  "externalNodes": {},
+  "dependencies": {
+    "automation": []
+  },
+  "version": "6.0"
+}

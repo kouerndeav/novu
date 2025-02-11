@@ -1,0 +1,91 @@
+{
+  "version": "6.0",
+  "nxVersion": "20.1.2",
+  "pathMappings": {
+    "automation": ["src/index.ts"]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [],
+    "projectFileMap": {
+      "automation": [
+        {
+          "file": ".editorconfig",
+          "hash": "5443105041930014821"
+        },
+        {
+          "file": ".gitignore",
+          "hash": "16877376182141465221"
+        },
+        {
+          "file": ".prettierignore",
+          "hash": "16448050467312557263"
+        },
+        {
+          "file": ".verdaccio/config.yml",
+          "hash": "14993594506392938393"
+        },
+        {
+          "file": ".vscode/extensions.json",
+          "hash": "15303740426934437843"
+        },
+        {
+          "file": ".vscode/settings.json",
+          "hash": "10736989266964588500"
+        },
+        {
+          "file": "README.md",
+          "hash": "11360231397670422164"
+        },
+        {
+          "file": "generators.json",
+          "hash": "10584592710095429158"
+        },
+        {
+          "file": "nx.json",
+          "hash": "15204350317894444797"
+        },
+        {
+          "file": "package.json",
+          "hash": "2567784607951107872"
+        },
+        {
+          "file": "project.json",
+          "hash": "11167985911030973372"
+        },
+        {
+          "file": "src/generators/provider/files/__name__.provider.ts.template",
+          "hash": "5379137915717788483"
+        },
+        {
+          "file": "src/generators/provider/files/__name__.test.provider.spec.ts.template",
+          "hash": "11391171656961906247"
+        },
+        {
+          "file": "src/generators/provider/generator.ts",
+          "hash": "9162758859531686444"
+        },
+        {
+          "file": "src/generators/provider/schema.json",
+          "hash": "18130321743508877812"
+        },
+        {
+          "file": "src/generators/provider/schema.ts",
+          "hash": "7671356758956800495"
+        },
+        {
+          "file": "tsconfig.json",
+          "hash": "5075305221694003932"
+        },
+        {
+          "file": "tsconfig.lib.json",
+          "hash": "12838044970532873408"
+        },
+        {
+          "file": "tsconfig.spec.json",
+          "hash": "9246535754200198080"
+        }
+      ]
+    }
+  }
+}
