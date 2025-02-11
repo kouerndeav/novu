@@ -31,6 +31,7 @@ import {
   BrevoSmsHandler,
   EazySmsHandler,
   MobishastraHandler,
+  B24PlusGateSmsHandler,
 } from './handlers';
 
 export class SmsFactory implements ISmsFactory {
@@ -65,6 +66,7 @@ export class SmsFactory implements ISmsFactory {
     new BrevoSmsHandler(),
     new EazySmsHandler(),
     new MobishastraHandler(),
+    new B24PlusGateSmsHandler(),
   ];
 
   getHandler(integration: IntegrationEntity) {

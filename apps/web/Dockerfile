@@ -21,15 +21,16 @@ COPY tsconfig.json .
 COPY nx.json .
 COPY pnpm-workspace.yaml .
 COPY pnpm-lock.yaml .
-
-RUN --mount=type=cache,id=pnpm-store-web,target=/root/.pnpm-store\
-  pnpm install --frozen-lockfile
+#
+#RUN --mount=type=cache,id=pnpm-store-web,target=/root/.pnpm-store\
+#  pnpm install --no-frozen-lockfile
 
 RUN pnpm add @babel/core -w
 
 COPY [".prettierrc",".prettierignore", "./"]
 
-RUN CI='' pnpm build:web --skip-nx-cache
+# copy build files
+
 # end build stage
 
 # start production stage

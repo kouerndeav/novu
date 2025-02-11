@@ -31,6 +31,7 @@ import {
   whatsAppBusinessConfig,
   eazySmsConfig,
   mobishastraConfig,
+  b24PlusGateConfig,
 } from '../credentials';
 import { ChannelTypeEnum, SmsProviderIdEnum } from '../../../types';
 import { UTM_CAMPAIGN_QUERY_PARAM } from '../../../ui';
@@ -287,5 +288,14 @@ export const smsProviders: IProviderConfig[] = [
     credentials: mobishastraConfig,
     docReference: 'https://telkosh.com/mobishastra/',
     logoFileName: { light: 'mobishastra.png', dark: 'mobishastra.png' },
+  },
+
+  {
+    id: SmsProviderIdEnum.B24PlusGate,
+    displayName: 'Bill24 Plus Gate SMS',
+    channel: ChannelTypeEnum.SMS,
+    credentials: b24PlusGateConfig,
+    docReference: 'https://plasgate.com/services/',
+    logoFileName: { light: 'plusgatelogo.jpg', dark: 'plusgatelogo.jpg' },
   },
 ];

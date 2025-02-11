@@ -1173,3 +1173,19 @@ export const mobishastraConfig: IConfigCredentials[] = [
   },
   ...smsConfigBase,
 ];
+
+export const b24PlusGateConfig: IConfigCredentials[] = [
+  {
+    key: CredentialsKeyEnum.SecretKey,
+    displayName: 'Secret Key',
+    type: 'string',
+    required: true,
+  },
+  {
+    key: CredentialsKeyEnum.ApiKey,
+    displayName: 'Private Key',
+    type: 'string',
+    required: true,
+  },
+  ...smsConfigBase,
+];
